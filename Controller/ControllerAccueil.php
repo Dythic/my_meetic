@@ -1,19 +1,19 @@
 <?php
 
-require_once 'Model/User.php'
+require_once 'Model/Publish.php';
 require_once 'Vue/Vue.php';
 
 class ControllerAccueil {
 
-    private $user;
+    private $publish;
 
     public function __construct() {
-        $this->user = new User();
+        $this->publish = new Publish();
     }
 
     public function accueil() {
-        $users = $this->user->getUsers();
+        $publishs = $this->publish->getPublishs();
         $vue = new Vue("Accueil");
-        $vue->generate(array('users' => $users));
+        $vue->generate(array('publishs' => $publishs));
     }
 }

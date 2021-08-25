@@ -1,13 +1,14 @@
-  <?php $this->titre = "Mon Blog"; ?>
+<?php $this->titre = "Mon Blog"; ?>
 
-<?php foreach ($users as $user):
+<p>Hello</p>
+
+<?php foreach ($publishs as $publish):
     ?>
     <article>
         <header>
-            <a href="<?= "index.php?action=user&id=" . $user['user'] ?>">
-                <h1 class="titreBillet"><?= $user['username'] ?></h1>
-            </a>
+            <h1 class="titre"><?= $publish['username'] ?></h1>
         </header>
+        <p><?= $publish['contents'] ?></p>
     </article>
     <hr />
-<?php endforeach; ?>
+<?php endforeach; ?> 

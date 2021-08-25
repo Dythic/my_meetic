@@ -16,7 +16,7 @@ abstract class Model {
 
     private function getBdd() {
         if ($this->bdd == null) {
-        $this->bdd = new PDO('mysql:host=localhost;dbname=my_meetic;charset=utf8',
+        $this->bdd = new PDO('mysql:host=localhost;port=3307;dbname=my_blog;charset=utf8',
             'root', 'root', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
         }
         return $this->bdd;
